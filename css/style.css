@@ -2,6 +2,7 @@
     ---rojoclaro:#451013;
     --rojooscuro:#1C0E0A;
     --azul:#9FB0C6;
+    
     --crema:#E2E0D1;
     --border:50%;
     --inter:"Inter", sans-serif;
@@ -127,3 +128,136 @@ h3{
 .eventos{
 background-color: var(--rojooscuro);
 }
+/* =========================================================
+   TIENDA
+   ========================================================= */
+
+
+/* ---------- Reset básico ---------- */
+
+code {
+    font-family: var(--fuente-codigo);
+    font-size: 0.95em;
+    padding: 0.05rem 0.35rem;
+    background-color: var(--color-borde);
+    border-radius: 4px;
+}
+
+/* ---------- Cabecera ---------- */
+
+/* ---------- Contenido ---------- */
+.contenido {
+    width: 100%;
+    max-width: var(--ancho-max);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacio);
+}
+
+/* ---------- Filtros ---------- */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filtro {
+    padding: 0.55rem 1.2rem;
+    background: none;   
+    border: 0;  
+    font-family: Arial, Helvetica, sans-serif;        
+}
+.filtro.activo {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* ---------- Cartel (las tarjetas las crea el JS) ---------- */
+.cartel {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+
+.artista {
+    flex: 0 1 250px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.artista:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(18, 24, 27, 0.12);
+}
+
+/* Zona de color tipo póster: el color llega desde los datos (style) */
+.artista__poster {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.artista__poster {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.2rem;
+}
+
+/* Mensaje si un filtro no tiene artistas (reto extra) */
+.cartel__vacio {
+    padding: var(--espacio);
+    color: var(--color-suave);
+    font-style: italic;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    font: inherit;
+    font-size: 0rem;
+}
+
+.boton--borde {
+    color: var(--color-texto);
+    background-color: transparent;
+    border: 2px solid var(--color-texto);
+}
+
+.boton--borde:hover {
+    color: var(--color-superficie);
+    background-color: var(--color-texto);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .artista {
+        flex-basis: 100%;
+    }
+
+    .cabecera h1 {
+        font-size: 2rem;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 510px) {
+    h1{
+        font-size: 2rem
+   }
+    p{
+        font-size: 1rem;
+    }
+}
+
+
