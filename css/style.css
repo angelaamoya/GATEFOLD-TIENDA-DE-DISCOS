@@ -1,0 +1,104 @@
+:root {
+    ---rojoclaro:#451013;
+    --rojooscuro:#1C0E0A;
+    --azul:#9FB0C6;
+    --crema:#E2E0D1;
+    --border:50%;
+    --inter:"Inter", sans-serif;
+    --baskerville:"Libre Baskerville", serif;
+    --size: 400px;
+    --reveal: 300px;
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+    background-color: var(--azul);
+}
+img{
+    width: 100%;
+    vertical-align:middle ;
+}
+
+h1{
+    font-family: var(--baskerville);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 4rem;
+}
+h2{
+    font-family: var(--inter);
+    color: #E2E0D1;
+    font-size: 3rem;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url("../media/elementos-graficos/Star 1.svg") no-repeat center / contain;
+}
+
+div.record-collection {
+  display: flex;            
+  width: 100%;
+  overflow: hidden;     
+  white-space: nowrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  z-index: 0;
+}
+
+div.albumcover, div.first-albumcover {
+  flex: 0 0 auto;
+  height: var(--size);
+  width: var(--size);
+  margin-top: 15px;
+  margin-bottom: 0px;
+  opacity: 1;
+  text-align: right;
+}
+
+div.albumcover img, div.first-albumcover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.first-albumcover {
+  position: relative;
+  background: lightgray;
+  z-index: 1000;
+}
+
+div.albumcover {
+  position: relative;
+}
+
+div.albumcover:hover {
+  transform: translate(var(--reveal));
+  transition-timing-function: ease-in;
+  transition-duration: 0.3s;
+}
+
+.novedades{
+    background-color: var(---rojoclaro);
+}
+h3{
+    font-family: var(--inter);
+    color: var(--crema);
+    font-weight: 500;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+.novedades-lps{
+    object-fit: cover;
+}
