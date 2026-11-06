@@ -30,3 +30,9 @@ function layout() {
 layout();
 window.addEventListener("resize", layout);
 
+function medir() {
+  itemW = 200;                                        // ancho fijo de cada portada
+  $track.children().css({ width: itemW, marginRight: gap });
+  distancia = (itemW + gap) * total;
+}
+$items.clone().attr('aria-hidden', 'true').appendTo($track);
