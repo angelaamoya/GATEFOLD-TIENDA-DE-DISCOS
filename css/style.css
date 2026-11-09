@@ -149,9 +149,9 @@ h4{
     font-family: var(--baskerville);
     display: flex;
     justify-content: center;
-    text-decoration: none;
     font-weight: 400;
     font-style: italic;
+    text-decoration: noneg;
 }
 /* ---------- Contenido ---------- */
 .contenido {
@@ -168,18 +168,19 @@ h4{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
 }
 
 .filtro {
     padding: 0.55rem 1.2rem;
     background: none;   
     border: 0;  
-    font-family: Arial, Helvetica, sans-serif;        
+    font-family: var(--inter);
+    font-size:2rem;      
 }
 .filtro.activo {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--inter);
 }
+
 
 
 /* ---------- Cartel (las tarjetas las crea el JS) ---------- */
@@ -214,13 +215,6 @@ h4{
     display: flex;
     align-items: flex-end;
     padding: 1.2rem;
-}
-
-/* Mensaje si un filtro no tiene artistas (reto extra) */
-.cartel__vacio {
-    padding: var(--espacio);
-    color: var(--color-suave);
-    font-style: italic;
 }
 
 /* ---------- Botones ---------- */

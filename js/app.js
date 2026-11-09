@@ -43,7 +43,7 @@ var artistas = [
     {
         dia: "Rap",
         hora: "22:00",
-        imagen: "./albumes/TUPAC.jpg",
+        imagen: "./media/albumes/TUPAC.jpg",
     }
 ];
 // Empieza aquí tu código
