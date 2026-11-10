@@ -31,7 +31,7 @@ layout();
 window.addEventListener("resize", layout);
 
 function medir() {
-  itemW = 200;                                        // ancho fijo de cada portada
+  itemW = 200;                                        
   $track.children().css({ width: itemW, marginRight: gap });
   distancia = (itemW + gap) * total;
 }

@@ -42,7 +42,7 @@ h2{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url("../media/elementos-graficos/Star 1.svg") no-repeat center / contain;
+    background: url("../media/elementos-graficos/Star-1.svg") no-repeat center / contain;
 }
 
 div.record-collection {
@@ -80,6 +80,14 @@ div.first-albumcover {
 
 div.albumcover {
   position: relative;
+}
+div.albumcover {
+  transition: transform 0.3s ease-out;   
+}
+
+div.albumcover:hover {
+  transform: translate(var(--reveal));
+  transition: transform 0.3s ease-in;    
 }
 
 div.albumcover:hover {
