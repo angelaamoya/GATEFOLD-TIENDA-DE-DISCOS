@@ -7,10 +7,26 @@
     <title>Tienda</title>
 </head>
 <body>
-    <header class="cabecera">
-        <a href="index.html"><h4>Tienda</h4></a>
-    </header>
+          <header class="cabecera">
+        <div class="cabecera__barra">
 
+            <!-- Solo se ve en móvil -->
+            <button type="button" class="menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- En móvil está oculto hasta pulsar el botón -->
+        <nav class="menu">
+            <a href="index.html#inicio">HOME</a>
+            <a href="index.html#novedades">NEW IN</a>
+            <a href="tienda.html">STORE</a>
+            <a href="index.html#eventos">EVENTS</a>
+        </nav>
+    </header>
+        <div class="titulo-tienda"><a href="index.html"><h4>Tienda</h4></a></div>
     <main class="contenido">
 
         <!-- ============ FILTROS POR DÍA ============ -->
