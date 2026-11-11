@@ -16,6 +16,100 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+/*menu*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(---rojoclaro);
+    color: var(--color-texto);
+    font-family: var(--inter);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    gap: 3rem;
+}
+
+/* ---------- Cabecera y menú (móvil) ---------- */
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(---rojoclaro);
+    color: var(--crema);
+}
+
+.cabecera__barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--espacio);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--color-acento);
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--color-superficie);
+    border-radius: 2px;
+    transition: transform var(--transicion), opacity var(--transicion);
+}
+
+/* Clase que se añade con jQuery: las tres barras forman una X */
+.menu-btn.abierto span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.abierto span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.abierto span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* En móvil el menú empieza oculto: jQuery lo despliega */
+.menu {
+    display: none;
+    padding: 0 var(--espacio) 1rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.8rem 0;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    transition: color var(--transicion);
+}
+
+.menu a:hover {
+    color: var(--color-acento);
+}
 body{
     background-color: var(--azul);
 }
@@ -190,6 +284,7 @@ padding: 5rem;
     display: flex;
     text-align: center;
     font-family: var(--inter);
+    font-size: 3rem;
 }
 .FAQs{
     display: flex;
