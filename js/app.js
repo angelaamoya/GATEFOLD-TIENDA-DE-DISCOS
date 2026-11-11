@@ -80,7 +80,6 @@ function pintarCartel(diaActuacion) {
     }
 
     // mostramos cuántos artistas se han pintado
-    contador.textContent = "Mostrando " + total + " albumes.";
     cartel.innerHTML = html;
 
     // Paso 4: ventana modal asociada a cada botón de cada artista
@@ -106,3 +105,4 @@ for (var k = 0; k < filtros.length; k++) {
 //llamamos a la funcion
 
 pintarCartel("Todos");
+

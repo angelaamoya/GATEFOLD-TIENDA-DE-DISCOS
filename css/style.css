@@ -137,7 +137,7 @@ h3{
 }
 .events{
 background-color: var(--rojooscuro);
-padding: 0 5rem;
+padding: 5rem;
 }
 .cards{
     display: grid;
@@ -167,7 +167,6 @@ padding: 0 5rem;
 
 .card-event > * {
     position: relative;
-    
 }
 
 .evento1{
@@ -192,7 +191,106 @@ padding: 0 5rem;
     text-align: center;
     font-family: var(--inter);
 }
+.FAQs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 3rem ;
+}
+.FAQs h5{
+    font-size: 4rem;
+    font-family: var(--inter);
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+/* ---------- Acordeón ---------- */
 
+.acordeon__item {
+    background-color: var(--crema);
+    border: 1px solid var(---rojoclaro);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.acordeon__titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.3rem;
+    font: inherit;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: left;
+    color: var(--rojooscuro);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--inter)
+}
+
+/* Flecha a la derecha, creada con CSS */
+.acordeon__titulo::after {
+    content: "+";
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--azul);
+    transition: transform 0.25s ease;
+}
+
+/* Clase que se añade con jQuery al título abierto: el + se convierte en x */
+.acordeon__titulo.abierto::after {
+    transform: rotate(45deg);
+}
+
+/* Contenido oculto por defecto: jQuery lo despliega */
+.acordeon__contenido {
+    display: none;
+    padding: 0 1.3rem 1.3rem 3.1rem;
+    color: var(--rojooscuro);
+}
+
+.acordeon__contenido p + p {
+    margin-top: 0.6rem;
+}
+
+.acordeon__contenido strong {
+    color: var(---rojoclaro);
+}
+
+/* ---------- Escritorio ---------- */
+@media (min-width: 768px) {
+    .cabecera {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 var(--espacio);
+    }
+
+    .cabecera__barra {
+        padding: 1rem 0;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    /* !important porque jQuery deja un display en línea en el HTML
+       al plegar el menú en móvil; así el menú siempre se ve en escritorio */
+    .menu {
+        display: flex !important;
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .menu a {
+        padding: 0;
+        border-top: none;
+    }
+}
 /* =========================================================
     TIENDA
    ========================================================= */
@@ -209,14 +307,15 @@ code {
 }
 
 /* ---------- Cabecera ---------- */
-h4{
+ .cabecera h4{
     font-size: 5rem;
     font-family: var(--baskerville);
     display: flex;
     justify-content: center;
     font-weight: 400;
     font-style: italic;
-    text-decoration: noneg;
+
+    text-align: center;
 }
 /* ---------- Contenido ---------- */
 .contenido {
@@ -225,7 +324,7 @@ h4{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--espacio);
+    gap: 1.5rem;
 }
 
 /* ---------- Filtros ---------- */
