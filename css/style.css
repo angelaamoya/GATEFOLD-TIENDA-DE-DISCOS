@@ -12,9 +12,9 @@
 }
 
 *{
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--azul);
@@ -99,6 +99,9 @@ div.albumcover:hover {
 .novedades{
     background-color: var(---rojoclaro);
 }
+a{
+    text-decoration: none;
+}
 h3{
     font-family: var(--inter);
     color: var(--crema);
@@ -107,7 +110,6 @@ h3{
     display: flex;
     justify-content: center;
     padding: 5%;
-    text-decoration: none;
 }
 .novedades-lps {
   display: flex;
@@ -135,9 +137,64 @@ h3{
 }
 .events{
 background-color: var(--rojooscuro);
+padding: 0 5rem;
 }
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5rem;
+}
+.card-event{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7rem;
+    min-height: 500px;
+    padding: 1.2rem;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    color: var(--crema);
+}
+
+.card-event::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 29, 29, 0.41);
+}
+
+.card-event > * {
+    position: relative;
+    
+}
+
+.evento1{
+    background-image: url(../media/cards/kpop.jpg);
+}
+.evento2{
+    background-image: url(../media/cards/pop.jpg);
+}
+.evento3{
+    background-image: url(../media/cards/2000s.jpg);
+}
+.card-event ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.card-event li{
+    font-family: var(--inter);
+}
+.card-event h4{
+    display: flex;
+    text-align: center;
+    font-family: var(--inter);
+}
+
 /* =========================================================
-   TIENDA
+    TIENDA
    ========================================================= */
 
 

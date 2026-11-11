@@ -1,1 +1,3 @@
-console.log(hola)
+AOS.init({
+   duration:700
+});
