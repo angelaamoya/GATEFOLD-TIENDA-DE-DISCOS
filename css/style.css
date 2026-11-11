@@ -494,9 +494,8 @@ code {
     color: var(--color-superficie);
     background-color: var(--color-texto);
 }
-footer{
-    background-color: var(---rojoclaro);
-}
+
+/*footer*/
 h6{
     font-size: 7rem;
     color: var(--crema);
@@ -504,6 +503,29 @@ h6{
     font-style: italic;
     font-weight: 400;
     display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: var(--rojoclaro);
+}
+
+.footers a {
+    color: var(--crema);
+    font-size: 3rem;
+}
+
+.footers {
+    display: flex;
+    gap: 5rem;
+    padding: 0 15rem;
+}
+footer p{
+    font-family: var(--baskerville);
+}
+.texto-footer{
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 /* ---------- Responsive ---------- */
