@@ -399,7 +399,18 @@ code {
     color: var(--color-superficie);
     background-color: var(--color-texto);
 }
-
+footer{
+    background-color: var(---rojoclaro);
+}
+h6{
+    font-size: 7rem;
+    color: var(--crema);
+    font-family: var(--baskerville);
+    font-style: italic;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
 /* ---------- Responsive ---------- */
 @media (max-width: 600px) {
     .artista {
