@@ -26,7 +26,6 @@ body {
     color: var(--color-texto);
     font-family: var(--inter);
     line-height: 1.6;
-    overflow: hidden;
 }
 
 a {
@@ -223,6 +222,7 @@ h3{
 .events{
 background-color: var(--rojooscuro);
 padding: 5rem;
+overflow: hidden;
 }
 .cards{
     display: grid;
@@ -520,6 +520,7 @@ footer {
     display: flex;
     gap: 3rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 footer p{
     font-family: var(--inter);
@@ -547,6 +548,20 @@ footer p{
     }
     h3{
         font-size: 2rem;
+    }
+}
+@media(max-width: 818px) {
+    h6{
+        font-size:5rem ;
+    }
+    .footers a{
+        font-size: 2rem;
+    }
+    .texto-footer p{
+        font-size: 1.3rem ;
+    }
+    .social-media{
+        gap: 5rem;
     }
 }
 @media (max-width: 600px) {
@@ -582,4 +597,9 @@ footer p{
     }
 }
 
+@media (max-width: 320px){
+    .p{
+        font-size: 0,7rem;
+    }
+}
 
