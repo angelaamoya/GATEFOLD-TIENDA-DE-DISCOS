@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
@@ -26,7 +27,10 @@
             <a href="index.html#eventos">EVENTS</a>
         </nav>
     </header>
-        <div class="titulo-tienda"><a href="index.html"><h4>Tienda</h4></a></div>
+        <div class="titulo-tienda">
+            <a href="index.html"><h4>Tienda</h4></a>        
+            <img src="media/elementos-graficos/cart.svg" alt="carro">
+        </div>
     <main class="contenido">
 
         <!-- ============ FILTROS POR DÍA ============ -->
@@ -43,7 +47,7 @@
         <!-- ============ CARTEL ============ -->
         <section class="cartel" id="cartel"></section>
     </main>
-<section class="footer">
+<footer>
     <h6>Gatefold</h6>
     <div class="footers">
         <a href="index.html#inicio">HOME</a>
@@ -52,11 +56,17 @@
         <a href="index.html#eventos">EVENTS</a>
     </div>
     <div class="texto-footer">
-    <p>Address:</p>
-    <h7> Av. de Alfonso XIII, 97, 28016 Madrid</h7>
+    <p> Address: Av. de Alfonso XIII, 97, 28016 Madrid</p>
     </div>
-</section>
+    <div class="social-media">
+        <img src="../media/elementos-graficos/tiktok.svg" alt="twt">
+        <img src="../media/elementos-graficos/twt.svg" alt="twt">
+<img src="../media/elementos-graficos/ig.svg" alt="">
+    </div>
+</footer>
     <script src="js/app.js"></script>
+    <script src="js/menu-hamburguesa.js"></script>
+    <script src="js/aos-home.js"></script>
 
 </body>
 </html>
