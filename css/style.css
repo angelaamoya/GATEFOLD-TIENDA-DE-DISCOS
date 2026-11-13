@@ -477,30 +477,6 @@ code {
     padding: 1.2rem;
 }
 
-/* ---------- Botones ---------- */
-.boton {
-    flex-shrink: 0;
-    padding: 0.5rem 1rem;
-    font: inherit;
-    font-size: 0rem;
-}
-
-.boton--borde {
-    color: var(--color-texto);
-    background-color: transparent;
-    border: 2px solid var(--color-texto);
-}
-
-.boton--borde:hover {
-    color: var(--color-superficie);
-    background-color: var(--color-texto);
-}
-.d-producto{
-    color: var();
-}
-.comprar{
-    color: var(--rojooscuro);
-}
 /*footer*/
 h6{
     font-size: 7rem;
