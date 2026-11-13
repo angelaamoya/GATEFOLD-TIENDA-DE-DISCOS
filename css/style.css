@@ -495,7 +495,12 @@ code {
     color: var(--color-superficie);
     background-color: var(--color-texto);
 }
-
+.d-producto{
+    color: var();
+}
+.comprar{
+    color: var(--rojooscuro);
+}
 /*footer*/
 h6{
     font-size: 7rem;
