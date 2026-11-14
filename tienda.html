@@ -29,21 +29,19 @@
     </header>
         <div class="titulo-tienda">
             <a href="index.html"><h4>Tienda</h4></a>
-            <!---BOTON Y MENU MODAL-->   
-                 
-            <button type="button" id="abrir-carrito" aria-label="Abrir carrito">
-            <img src="media/elementos-graficos/cart.svg" alt=""></button>
-        </button>
+            <button type="button" id="carrito-btn" aria-label="Abrir carrito">
+                <img src="media/elementos-graficos/cart.svg" alt="">
+            </button>
         </div>
     <main class="contenido">
 
         <!-- ============ FILTROS POR DÍA ============ -->
         <!-- Cada botón guarda en data-dia el día que filtra -->
         <nav class="filtros" aria-label="Filtrar por día">
-            <button type="button" class="filtro is-activo" data-dia="Todos">Todos</button>
-            <button type="button" class="filtro" data-dia="Pop/Rock internacional">Pop/Rock internacional</button>
-            <button type="button" class="filtro" data-dia="Indie">Indie</button>
-            <button type="button" class="filtro" data-dia="Rap">Rap</button>
+            <button type="button" class="filtro is-activo" data-dia="Todos">Todos
+            <button type="button" class="filtro" data-dia="Pop/Rock internacional">Pop/Rock internacional
+            <button type="button" class="filtro" data-dia="Indie">Indie
+            <button type="button" class="filtro" data-dia="Rap">Rap
         </nav>
 
         <p class="contador" id="contador"></p>
@@ -68,10 +66,28 @@
         <img src="../media/elementos-graficos/twt.svg" alt="twt">
 <img src="../media/elementos-graficos/ig.svg" alt="">
     </div>
-</footer>
+   </footer>
+<!--carrito-->
+<div class="fondo" id="fondo"></div>
+
+<aside class="panel" id="panel-carrito" role="dialog" aria-modal="true" aria-labelledby="t-carrito" aria-hidden="true">
+    <button type="button" class="cerrar" aria-label="Cerrar carrito">&times;</button>
+    <h2 id="t-carrito">Carrito</h2>
+    <div class="lista" id="lista"></div>
+
+    <button type="button" class="comprar" data-anadir
+            data-nombre="Imaginal Disk"
+            data-precio="35"
+            data-img="media/albumes/imaginaldisk.jpg">
+        Comprar ya
+    </button>
+</aside>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/menu-hamburguesa.js"></script>
     <script src="js/aos-home.js"></script>
-
+    <script src="js/carrito.js"></script>
+</body>
 </body>
 </html>
