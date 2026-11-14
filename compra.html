@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Ya</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!--fuentes (google fonts)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="cabecera__barra">
+
+            <!-- Solo se ve en móvil -->
+            <button type="button" class="menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- En móvil está oculto hasta pulsar el botón -->
+        <nav class="menu">
+            <a href="index.html#inicio">HOME</a>
+            <a href="index.html#novedades">NEW IN</a>
+            <a href="tienda.html">STORE</a>
+            <a href="index.html#eventos">EVENTS</a>
+        </nav>
+    </header>
+
+    <!-- Botón del carrito -->
+    <div class="titulo-tienda">
+                <button type="button" id="carrito-btn" aria-label="Abrir carrito">
+            <img src="media/elementos-graficos/cart.svg" alt="">
+        </button>
+    </div>
+
+    <main>
+        <div class="disco-comprado">
+            <img src="media/albumes/imaginaldisk.jpg" alt="Portada de Imaginal Disk">
+            <div class="info-disco">
+                <h1>Imaginal Disk</h1>
+                <h2>35€</h2>
+                <button type="button" class="btn-carrito" data-anadir
+                        data-nombre="Imaginal Disk"
+                        data-precio="35"
+                        data-img="media/albumes/imaginaldisk.jpg">
+                    Add to cart
+                </button>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Carrito (panel lateral) -->
+    <div class="fondo" id="fondo"></div>
+
+    <aside class="panel" id="panel-carrito" role="dialog" aria-modal="true" aria-labelledby="t-carrito" aria-hidden="true">
+        <button type="button" class="cerrar" aria-label="Cerrar carrito">&times;</button>
+        <h2 id="t-carrito">Carrito</h2>
+        <div class="lista" id="lista"></div>
+        <button type="button" class="comprar">Comprar ya</button>
+    </aside>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/menu-hamburguesa.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

@@ -674,14 +674,20 @@ footer p {
 }
 
 .btn-carrito {
-    background-color: var(--rojooscuro);
     border-radius: 30px;
+    background-color: var(--crema);
+    
 }
 
 .btn-carrito p {
     color: var(--crema);
     display: flex;
     justify-content: center;
+}
+
+.disco-comprado h2{
+    color: var(--color-texto);
+    font-size: 2rem;
 }
 
 /* ---------- Responsive ---------- */

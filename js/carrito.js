@@ -90,3 +90,6 @@ $(function () {
 
     pintar();
 });
+$('#cartel').on('click', 'button', function () {
+    window.location.href = 'compra.html';
+});
