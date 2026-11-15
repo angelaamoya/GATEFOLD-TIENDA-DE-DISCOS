@@ -41,7 +41,36 @@
 
     <main>
         <div class="disco-comprado">
-            <img src="media/albumes/imaginaldisk.jpg" alt="Portada de Imaginal Disk">
+
+    <header class="cabecera">
+        <p class="cabecera__kicker">Diseño Web Avanzado · Tema 4</p>
+        <h1>Slideshow con jQuery</h1>
+        <p class="cabecera__texto">Las instrucciones están en <code>js/script.js</code>.</p>
+    </header>
+
+    <main class="slideshow">
+
+        <!-- Las diapositivas: solo la primera se ve al cargar (lo hace el CSS).
+             Imágenes de ejemplo de Lorem Picsum (fotos de Unsplash). -->
+        <div class="slideshow__pantalla">
+            <img class="slide" src="albumes/1989ç.jpg" alt="Imagen de ejemplo 1">
+            <img class="slide" src="albumes/imaginaldisk.jpg" alt="Imagen de ejemplo 2">
+            <img class="slide" src="albumes/SAW.jpg" alt="Imagen de ejemplo 3">
+            <img class="slide" src="albumes/ADELE.jpg" alt="Imagen de ejemplo 4">
+        </div>
+
+        <!-- Controles -->
+        <div class="slideshow__controles">
+            <button type="button" class="boton" id="anterior" aria-label="Diapositiva anterior">←</button>
+            <p class="slideshow__contador" id="contador">1 / 4</p>
+            <button type="button" class="boton" id="siguiente" aria-label="Diapositiva siguiente">→</button>
+        </div>
+
+    </main>
+
+    <!-- PASO 0: primero jQuery desde su CDN, después nuestro script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
             <div class="info-disco">
                 <h1>Imaginal Disk</h1>
                 <h2>35€</h2>
