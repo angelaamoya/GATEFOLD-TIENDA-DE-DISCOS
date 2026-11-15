@@ -199,20 +199,35 @@ div.albumcover:hover {
 .novedades-lps {
     display: flex;
     gap: 2rem;
-    overflow-x: auto;
     padding: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: 100px;
+    scrollbar-width: auto;
+    scrollbar-color: #8b2e2e transparent; 
 }
 
+
 .novedades-lps::-webkit-scrollbar {
-    display: flex;
-    align-items: center;
+    height: 12px; 
+}
+
+.novedades-lps::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+}
+
+.novedades-lps::-webkit-scrollbar-thumb {
+    background: #8b2e2e;
+    border-radius: 6px;
+}
+
+.novedades-lps::-webkit-scrollbar-thumb:hover {
+    background: #6f2424;
 }
 
 .novedades-item {
-    flex: 0 0 calc((100% - 2rem) / 3);
+    flex: 0 0 calc((100% - 4rem - 2rem) / 3);
     scroll-snap-align: start;
 }
 
@@ -340,12 +355,10 @@ div.albumcover:hover {
     transition: transform 0.25s ease;
 }
 
-/* Clase que se añade con jQuery al título abierto: el + se convierte en x */
 .acordeon__titulo.abierto::after {
     transform: rotate(45deg);
 }
 
-/* Contenido oculto por defecto: jQuery lo despliega */
 .acordeon__contenido {
     display: none;
     padding: 0 1.3rem 1.3rem 3.1rem;
@@ -377,8 +390,6 @@ div.albumcover:hover {
         display: none;
     }
 
-    /* !important porque jQuery deja un display en línea en el HTML
-       al plegar el menú en móvil; así el menú siempre se ve en escritorio */
     .menu {
         display: flex !important;
         gap: 1.5rem;
@@ -573,7 +584,6 @@ body.carrito-abierto .panel {
     cursor: pointer;
 }
 
-/* El HTML usa is-activo; dejo también activo por si lo usa el JS */
 .filtro.is-activo,
 .filtro.activo {
     font-weight: 700;
@@ -714,8 +724,6 @@ footer p {
     color: var(--crema);
     background-color: var(--rojoclaro);
     border: none;
-    border-radius: 50%;
-    cursor: pointer;
     transition: background-color 0.25s ease;
 }
 
@@ -772,6 +780,10 @@ footer p {
     .social-media {
         gap: 5rem;
     }
+
+    .disco-comprado{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 600px) {
@@ -794,6 +806,16 @@ footer p {
     .texto-footer p {
         font-size: 1rem;
     }
+        p {
+        font-size: 0.9rem;
+    }
+
+    .slideshow {
+    width: 95%;          
+    max-width: 1000px;    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 @media (max-width: 510px) {
@@ -810,12 +832,28 @@ footer p {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
+
+    .h1{
+        font-size: 1rem;
+        }
+
+    .slideshow {
+    width: 75%;          
+    max-width: 1000px;    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 }
 
 @media (max-width: 320px) {
     p {
         font-size: 0.7rem;
     }
+
+    .h1{
+        font-size: 2rem;
+        }
 }
