@@ -203,11 +203,12 @@ div.albumcover:hover {
     padding: 1rem;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scrollbar-width: none;
+    scrollbar-width: 100px;
 }
 
 .novedades-lps::-webkit-scrollbar {
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
 .novedades-item {
