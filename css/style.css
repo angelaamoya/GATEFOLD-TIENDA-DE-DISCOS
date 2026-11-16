@@ -737,9 +737,16 @@ footer p {
 }
 
 .btn-carrito {
-    border-radius: 30px;
-    background-color: var(--crema);
-    
+    align-self: center;
+    margin-top: 1rem;
+    background-color: var(--rojooscuro);
+    color: var(--crema);
+    border: 0;
+    border-radius: 14px;
+    padding: 0.6rem 2.6rem;
+    font-family: var(--inter);
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .btn-carrito p {

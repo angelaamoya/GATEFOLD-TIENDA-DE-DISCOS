@@ -46,14 +46,11 @@ var artistas = [
         imagen: "./media/albumes/TUPAC.jpg",
     }
 ];
-// Empieza aquí tu código
 console.log(artistas.length); 
 console.log(artistas[1].nombre);
 
-// Seleccionamos los elementos
 var cartel = document.querySelector("#cartel");
 
-//funcuion que pinta los artistas en el cartel
 
 function pintarCartel(diaActuacion) {
     var html = "";
@@ -79,10 +76,8 @@ function pintarCartel(diaActuacion) {
         }
     }
 
-    // mostramos cuántos artistas se han pintado
     cartel.innerHTML = html;
 
-    // Paso 4: ventana modal asociada a cada botón de cada artista
     var botonesArtista = document.querySelectorAll(".boton-artista");
     for (var j = 0; j < botonesArtista.length; j++) {
         botonesArtista[j].addEventListener("click", abrirModal);
@@ -90,7 +85,6 @@ function pintarCartel(diaActuacion) {
 }
 
 
-// Paso 3: Filtros por dia 
 var filtros = document.querySelectorAll(".filtro"); 
 console.log(filtros);
 
@@ -102,7 +96,6 @@ for (var k = 0; k < filtros.length; k++) {
     });
 }
 
-//llamamos a la funcion
 
 pintarCartel("Todos");
 
