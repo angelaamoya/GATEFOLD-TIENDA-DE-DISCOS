@@ -6,10 +6,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <title>Tienda</title>
 </head>
 <body>
-        <header class="cabecera">
+    <header class="cabecera">
         <div class="cabecera__barra">
 
             <!-- Solo se ve en móvil -->
@@ -28,26 +31,29 @@
             <a href="index.html#eventos">EVENTS</a>
         </nav>
     </header>
-        <div class="titulo-tienda">
-            <a href="index.html"><h4>Tienda</h4></a>
-            <button type="button" id="carrito-btn" aria-label="Abrir carrito">
-                <img src="media/elementos-graficos/cart.svg" alt="">
-            </button>
-        </div>
+
+    <div class="titulo-tienda">
+        <a href="index.html"><h4>Tienda</h4></a>
+        <button type="button" id="carrito-btn" aria-label="Abrir carrito">
+            <img src="media/elementos-graficos/cart.svg" alt="">
+        </button>
+    </div>
+
     <main class="contenido">
 
-        <!-- ============ FILTROS POR DÍA ============ -->
-        <!-- Cada botón guarda en data-dia el día que filtra -->
-        <nav class="filtros" aria-label="Filtrar por día">
-            <button type="button" class="filtro is-activo" data-dia="Todos">Todos <a href="compra.html"></a></button>
-            <button type="button" class="filtro" data-dia="Pop/Rock internacional">Pop/Rock internacional
-            <button type="button" class="filtro" data-dia="Indie">Indie
-            <button type="button" class="filtro" data-dia="Rap">Rap
+        <!-- ============ FILTROS ============ -->
+        <nav class="filtros" aria-label="Filtrar por género">
+            <button type="button" class="filtro is-activo" data-dia="Todos">Todos</button>
+            <button type="button" class="filtro" data-dia="Pop/Rock internacional">Pop/Rock internacional</button>
+            <button type="button" class="filtro" data-dia="Indie">Indie</button>
+            <button type="button" class="filtro" data-dia="Rap">Rap</button>
         </nav>
         <p class="contador" id="contador"></p>
+
         <!-- ============ CARTEL ============ -->
         <section class="cartel" id="cartel"></section>
     </main>
+
     <!--footer-->
 <footer>
     <h6>Gatefold</h6>
@@ -61,31 +67,30 @@
     <p> Address: Av. de Alfonso XIII, 97, 28016 Madrid</p>
     </div>
     <div class="social-media">
-        <img src="../media/elementos-graficos/tiktok.svg" alt="twt">
-        <img src="../media/elementos-graficos/twt.svg" alt="twt">
-        <img src="../media/elementos-graficos/ig.svg" alt="">
+        <img src="media/elementos-graficos/tiktok.svg" alt="twt">
+        <img src="media/elementos-graficos/twt.svg" alt="twt">
+<img src="media/elementos-graficos/ig.svg" alt="">
     </div>
-    </footer>
-<!--carrito-->
-<div class="fondo" id="fondo"></div>
+</footer>
 
-<aside class="panel" id="panel-carrito" role="dialog" aria-modal="true" aria-labelledby="t-carrito" aria-hidden="true">
-    <button type="button" class="cerrar" aria-label="Cerrar carrito">&times;</button>
-    <h2 id="t-carrito">Carrito</h2>
-    <div class="lista" id="lista"></div>
-    <button type="button" class="comprar" data-anadir
-            data-nombre="Imaginal Disk"
-            data-precio="35"
-            data-img="media/albumes/imaginaldisk.jpg">
-        Comprar ya
-    </button>
-</aside>
+    <!--carrito-->
+    <div class="fondo" id="fondo"></div>
+
+    <aside class="panel" id="panel-carrito" role="dialog" aria-modal="true" aria-labelledby="t-carrito" aria-hidden="true">
+        <button type="button" class="cerrar" aria-label="Cerrar carrito">&times;</button>
+        <h2 id="t-carrito">Carrito</h2>
+        <div class="lista" id="lista"></div>
+        <button type="button" class="comprar" data-anadir
+                data-nombre="Imaginal Disk"
+                data-precio="35"
+                data-img="media/albumes/imaginaldisk.jpg">
+            Comprar ya
+        </button>
+    </aside>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/menu-hamburguesa.js"></script>
-    <script src="js/aos-home.js"></script>
     <script src="js/carrito.js"></script>
-</body>
 </body>
 </html>
